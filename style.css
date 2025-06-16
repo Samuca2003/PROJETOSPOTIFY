@@ -1,0 +1,229 @@
+/* ============================== */
+/* VARIÁVEIS GLOBAIS (ROOT)       */
+/* ============================== */
+:root { 
+	--default-green: #1db954; /* Verde principal */
+	--light-green: #1ed760;   /* Verde claro usado no hover */
+}
+
+/* ============================== */
+/* RESET E CONFIGURAÇÕES INICIAIS*/
+/* ============================== */
+* {
+	box-sizing: border-box; /* Inclui padding e border dentro da largura/altura */
+margin:0;	
+padding: 0;             
+}
+
+body {
+	font-family: "Roboto", sans-serif; /* Define a fonte padrão do site */
+}
+
+/* ============================== */
+/* BOTÃO PADRÃO (UTILITÁRIO)     */
+/* ============================== */
+.btn-primary {
+	background: var(--default-green); /* Cor de fundo do botão */
+	color: white;                    
+	text-transform: uppercase;        /* Texto em letras maiúsculas */
+	padding: 15px 60px;           
+	
+	border:none;                     /* Remove borda */
+	border-radius: 30px;              /* Bordas arredondadas */
+	letter-spacing: 1px;              /* Espaçamento entre letras */
+	font-weight: bold;               /* Texto em negrito */
+	transition: all 300ms ease;       /* Transição suave ao interagir */
+}
+
+.btn-primary:hover {
+	background: var(--light-green);   /* Troca a cor ao passar o mouse */
+	cursor: pointer;                  /* Muda o cursor para indicar que é clicável */
+}
+
+/* ============================== */
+/* LOGO                          */
+/* ============================== */
+.logo {
+	height: 40px;  /* Altura fixa */
+	width: auto;   /* Mantém proporção original da imagem */
+}
+
+/* ============================== */
+/* NAVBAR                        */
+/* ============================== */
+#navbar {
+	display: flex;                       /* Layout flexível */
+	background-color: rgba(0, 0, 0, 0.6);/* Fundo preto translúcido */
+	color: white;                        /* Cor do texto */
+	justify-content: center;             /* Centraliza conteúdo */
+	position: fixed;                     /* Fixa no topo da página */
+	top: 0;                              /* Alinha no topo */
+	width: 100%;                         /* Ocupa largura total da tela */
+}
+
+#navbar .navbar-container {
+	width: 60%;                          /* Largura interna do conteúdo */
+	display: flex;                       
+	align-items: center;                
+	justify-content: space-between;     
+	padding: 20px 0;                     /* Espaçamento vertical */
+}
+
+#navbar .navbar-container ul {
+	display: flex;            /* Exibe os itens lado a lado */
+	list-style: none;         /* Remove marcadores de lista */
+	font-weight: bold;
+}
+
+#navbar .navbar-container ul li {
+	padding: 0 20px;          /* Espaçamento horizontal entre itens */
+	transition: all 300ms ease;
+}
+
+#navbar .navbar-container ul li:hover {
+	color: #1db954;           /* Muda a cor ao passar o mouse */
+	cursor: pointer;
+}
+
+#navbar .navbar-container ul li:nth-child(3) {
+	border-right: 1px solid white; /* Adiciona uma linha separadora no 3º item */
+}
+
+/* ============================== */
+/* SHOWCASE                      */
+/* ============================== */
+#showcase {
+	height: 100vh;                               /* Ocupa 100% da altura da viewport */
+	display: flex;
+	justify-content: center;                     /* Centraliza horizontalmente */
+	align-items: center;                         /* Centraliza verticalmente */
+	color: white;
+	background: url("/img/showcase.webp") center center/cover; /* Imagem centralizada e cobrindo tudo */
+	background-color: rgba(0, 0, 0, 0.4);         /* Fundo escuro semi-transparente */
+	background-blend-mode: color;                /* Mistura cor com imagem de fundo */
+}
+
+#showcase .showcase-container {
+	display: flex;
+	flex-direction: column;                      /* Coloca elementos verticalmente */
+	align-items: center;
+}
+
+#showcase .showcase-container h2 {
+	font-size: 5rem;                             /* Título bem grande */
+}
+
+#showcase .showcase-container p {
+	margin: 15px 0;
+	font-size: 1.1rem;
+}
+
+/* ============================== */
+/* RODAPÉ (FOOTER)               */
+/* ============================== */
+#footer {
+	background: black;
+	color: white;
+	padding: 80px 0;                            /* Espaçamento interno */
+}
+
+#footer .footer-content {
+	display: flex;
+	width: 60%;
+	margin: auto;                               /* Centraliza horizontalmente */
+	justify-content: space-between;             /* Espaçamento entre colunas */
+}
+
+#footer .footer-content .footer-menu {
+	margin: 0 60px;
+	list-style: none;
+}
+
+#footer .footer-content .footer-menu .footer-menu-item {
+	margin: 25px 0;
+	transition: all 300ms ease;
+}
+
+#footer .footer-content .footer-menu .footer-menu-item:hover {
+	color: var(--default-green);               /* Destaca item ao passar o mouse */
+	cursor: pointer;
+}
+
+#footer .footer-content .footer-menu p {
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #919496;                            /* Cinza claro */
+	font-size: 0.8rem;
+}
+
+/* ============================== */
+/* ÍCONES SOCIAIS                */
+/* ============================== */
+.socials {
+	display: flex;
+}
+
+.socials i {
+	margin: 0 20px;
+	font-size: 1.7rem;
+	transition: all 300ms ease;
+}
+
+.socials i:hover {
+	color: var(--default-green);
+	cursor: pointer;
+}
+
+/* ============================== */
+/* INFORMAÇÕES DO FOOTER        */
+/* ============================== */
+.footer-info {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	width: 60%;
+	margin: auto;
+	font-weight: bold;
+	color: #919496;
+	font-size: 0.75rem;
+	padding-top: 50px;
+}
+
+.footer-info .footer-info-items {
+	display: flex;
+	list-style: none;
+}
+
+.footer-info .footer-info-items .footer-info-item {
+	margin: 0 10px;
+	transition: all 300ms ease;
+}
+
+.footer-info .footer-info-items .footer-info-item:hover {
+	color: var(--default-green);
+	cursor: pointer;
+}
+
+/* Localização (País) e Bandeira */
+.footer-info .rights .country {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+.footer-info .rights .country p {
+	transition: all 300ms ease;
+}
+
+.footer-info .rights .country p:hover {
+	color: var(--default-green);
+	cursor: pointer;
+}
+
+.footer-info .rights .country .brazil-flag {
+	height: 20px;
+	width: auto;
+	display: inline-block;
+	margin-left: 10px;
+}
